@@ -270,7 +270,7 @@ const Index = () => {
                     alt={work.title} 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
                 </div>
                 <CardContent className="p-6 space-y-2">
                   <div className="flex items-center justify-between">
