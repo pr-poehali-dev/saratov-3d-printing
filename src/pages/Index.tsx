@@ -14,7 +14,7 @@ const Index = () => {
           <nav className="hidden md:flex gap-6">
             <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Услуги</a>
             <a href="#tech" className="text-muted-foreground hover:text-foreground transition-colors">Технологии</a>
-            <a href="#examples" className="text-muted-foreground hover:text-foreground transition-colors">Примеры</a>
+            <a href="#gallery" className="text-muted-foreground hover:text-foreground transition-colors">Галерея</a>
             <a href="#price" className="text-muted-foreground hover:text-foreground transition-colors">Цены</a>
             <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Контакты</a>
           </nav>
@@ -212,6 +212,75 @@ const Index = () => {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" className="py-20 bg-card/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 space-y-4">
+            <h2 className="text-4xl font-bold">Галерея работ</h2>
+            <p className="text-xl text-muted-foreground">
+              Примеры наших 3D печатных изделий
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                img: "https://cdn.poehali.dev/projects/b66767bb-9dd4-418d-a25c-6614d01655ce/files/b04eb199-6f3f-453d-b7c1-e0735960c9e4.jpg",
+                title: "Промышленная шестерня",
+                tech: "FDM • PLA",
+                desc: "Точная копия изношенной детали"
+              },
+              {
+                img: "https://cdn.poehali.dev/projects/b66767bb-9dd4-418d-a25c-6614d01655ce/files/b7f78419-bd09-44f7-8a27-34556e2c353d.jpg",
+                title: "Прототип компонента",
+                tech: "FDM • ABS",
+                desc: "Функциональный тестовый образец"
+              },
+              {
+                img: "https://cdn.poehali.dev/projects/b66767bb-9dd4-418d-a25c-6614d01655ce/files/27ea19d7-f043-45b1-9fb3-8b220e6eae97.jpg",
+                title: "Декоративная фигурка",
+                tech: "SLA • Смола",
+                desc: "Высокая детализация поверхности"
+              },
+              {
+                img: "https://cdn.poehali.dev/projects/b66767bb-9dd4-418d-a25c-6614d01655ce/files/4b160e06-e0e8-4593-98cf-69ab8bad719c.jpg",
+                title: "Корпус подшипника",
+                tech: "FDM • Nylon",
+                desc: "Замена снятой с производства детали"
+              },
+              {
+                img: "https://cdn.poehali.dev/projects/b66767bb-9dd4-418d-a25c-6614d01655ce/files/f1165c1a-f888-40fe-b8e8-86a91577886d.jpg",
+                title: "Корпоративный сувенир",
+                tech: "FDM • PETG",
+                desc: "Брендированное изделие с логотипом"
+              },
+              {
+                img: "https://cdn.poehali.dev/projects/b66767bb-9dd4-418d-a25c-6614d01655ce/files/01c7b4b7-0525-4098-945b-145c2841b185.jpg",
+                title: "Гибкий уплотнитель",
+                tech: "FDM • TPU",
+                desc: "Эластичная прокладка"
+              }
+            ].map((work, idx) => (
+              <Card key={idx} className="bg-card border-border overflow-hidden group hover:border-primary/50 transition-all">
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src={work.img} 
+                    alt={work.title} 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+                <CardContent className="p-6 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-lg font-bold">{work.title}</h3>
+                    <span className="text-xs px-2 py-1 bg-primary/10 text-primary rounded">{work.tech}</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">{work.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
