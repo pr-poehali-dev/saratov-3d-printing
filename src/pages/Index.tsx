@@ -9,9 +9,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Icon name="Box" size={32} className="text-primary" />
-            <span className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              3D ПЕЧАТЬ САРАТОВ
-            </span>
+            <span className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">3DPRINT SARATOV</span>
           </div>
           <nav className="hidden md:flex gap-6">
             <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Услуги</a>
